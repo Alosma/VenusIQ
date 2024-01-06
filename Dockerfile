@@ -1,7 +1,7 @@
 FROM jepthoniq/jepthon:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/Qrh9/SaherAr.git /root/SHRU
+RUN git clone https://github.com/alosma/AnimeIQ.git /root/SHRU
 #working directory 
 WORKDIR /root/SHRU
 
