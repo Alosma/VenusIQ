@@ -13,7 +13,7 @@ _get_ziplink () {
         then
             echo "${UPSTREAM_REPO}/archive/${UPSTREAM_REPO_BRANCH}.zip"
         else
-            echo "${UPSTREAM_REPO}/archive/SHRU.zip"
+            echo "${UPSTREAM_REPO}/archive/ANUM.zip"
         fi
     else
         echo "aHR0cHM6Ly9naXRodWIuY29tL0Fsb3NtYS9BbmltZWlRL2FyY2hpdmUvQW51bS56aXA=" | base64 -d
@@ -45,7 +45,7 @@ _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
 OFFICIAL_UPSTREAM_REPO = "https://github.com/alosma/AnimeAr"
-ACTIVE_BRANCH_NAME = "SHRU"
+ACTIVE_BRANCH_NAME = "ANUM"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
 origin.fetch()
@@ -58,7 +58,7 @@ _run_cat_git() {
     $(_run_python_code 'from git import Repo
 import sys
 OFFICIAL_UPSTREAM_REPO="'$repolink'"
-ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "SHRU"
+ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "ANUM"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
 origin.fetch()
@@ -68,7 +68,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="SHRU.zip"
+    zippath="ANUM.zip"
     echo "جاري تنزيل اكواد السورس "
     wget -q $(_get_ziplink) -O "$zippath"
     echo " تفريغ البيانات "
@@ -87,7 +87,7 @@ _set_bot () {
     echo "
 
     "
-    python3 -m SHRU
+    python3 -m ANUM
 }
 
 _set_bot
