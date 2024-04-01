@@ -1,1 +1,1 @@
-worker: bash Anime
+worker: bash Venus
