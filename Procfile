@@ -1,1 +1,1 @@
-worker: bash Venus
+worker: bash Alosma
